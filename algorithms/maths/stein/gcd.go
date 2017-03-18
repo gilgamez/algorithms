@@ -2,7 +2,7 @@ package gcd
 
 import ()
 
-func recurse(a, b int) int {
+func Recurse(a, b int) int {
 	if a == b {
 		return a
 	}
@@ -29,7 +29,7 @@ func recurse(a, b int) int {
 	return recurse((b-a)>>1, a)
 }
 
-func iter(a, b int) int {
+func Iter(a, b int) int {
 	if a == b {
 		return a
 	}
