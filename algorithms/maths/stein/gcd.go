@@ -12,21 +12,21 @@ func Recurse(a, b int) int {
 
 	if a%2 == 0 {
 		if b%2 == 1 {
-			return recurse(a>>1, b)
+			return Recurse(a>>1, b)
 		} else {
-			return recurse(a>>1, b>>1) << 1
+			return Recurse(a>>1, b>>1) << 1
 		}
 	}
 
 	if b%2 == 0 {
-		return recurse(a, b>>1)
+		return Recurse(a, b>>1)
 	}
 
 	if a > b {
-		return recurse((a-b)>>1, b)
+		return Recurse((a-b)>>1, b)
 	}
 
-	return recurse((b-a)>>1, a)
+	return Recurse((b-a)>>1, a)
 }
 
 func Iter(a, b int) int {
